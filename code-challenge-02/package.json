@@ -1,0 +1,12 @@
+{
+  "name": "code-challenge-02",
+  "version": "1.0.0",
+  "description": "The second code challenge of 401. Create a function that take in an array and a number. That function should then place the number into the middle of the array. Do not use any array methods.",
+  "main": "array-shift.js",
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "watch": "jest --verbose --coverage --watchAll"
+  },
+  "author": "Ryan Milton",
+  "license": "MIT"
+}
