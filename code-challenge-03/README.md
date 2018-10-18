@@ -7,3 +7,4 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 This function chould take in a sorted array and a value. The function should iterate over the array and find the passed in value. Once found, return the index of the passed in value. If the passed in value does not exist in the array tha was passed in then return -1.
 
 #Solution
+<img src="assests/code-challenge-03.jpg">
