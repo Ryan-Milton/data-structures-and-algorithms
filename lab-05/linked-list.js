@@ -37,11 +37,33 @@ class LinkedList {
       return Node.value;
     }
   }
+
+  append(value) {
+    let newNode = new Node(value);
+    if(this.head.next === null) {
+      this.head.next = newNode;
+    }
+    while(Node.next === null) {
+      console.log(Node.next); // I log out undefined here and I have no idea why. Plus, while loops are not something I use so I'm trying to but to no avail.
+      Node.next = newNode;
+    }
+  }
+
+  insertBefore(value, newValue) {
+    let newNode = new Node(newValue);
+    // Don't know where to go from here...
+  }
+
+  insertAfter(value, newValue) {
+    let newNode = new Node(newValue);
+    // Don't know where to go from here...
+  }
 }
 
 const node1 = new Node('Hi');
-let node2 = new Node('Hey');
 
 const list1 = new LinkedList(node1);
+
+console.log(list1.append('Bye Bye'));
 
 list1.includes('Hi');
