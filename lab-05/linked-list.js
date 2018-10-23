@@ -8,27 +8,30 @@ class Node{
 }
 
 class LinkedList {
-  constructor(node) {
-    this.head = node.value;
+  constructor(node = null) {
+    this.head = node;
   }
 
   insert(value) {
-    console.log('I\'m adding a new Node to the List and becoming the HEAD!');
-    let newHead = new LinkedList( new Node(value) );
-    console.log(newHead);
+    // console.log('I\'m adding a new Node to the List and becoming the HEAD!');
+    // let newHead = new LinkedList( new Node(value) );
+    // console.log(newHead);
+    this.head = new Node(value, this.head);
   }
 
   includes(value) {
     //while there are still Nodes check to see if this Node.value exists.
-    while(Node.value !== undefined) {
-      if(Node.value === value) {
-        console.log(Node.value, 'It exists.')
-        return true;
-      } else {
-        console.log('This is not the Node you are looking for...')
-        return false;
-      }
-    }
+    // while(Node.value !== undefined) {
+    //   if(Node.value === value) {
+    //     console.log(Node.value, 'It exists.')
+    //     return true;
+    //   } else {
+    //     console.log('This is not the Node you are looking for...')
+    //     return false;
+    //   }
+    // }
+    let current = this.head;
+    while(current) {};
   }
 
   print() {
@@ -58,6 +61,25 @@ class LinkedList {
     let newNode = new Node(newValue);
     // Don't know where to go from here...
   }
+
+  kthFromTheEnd(k) {
+    let hare = this.head;
+    let snail = null;
+    let snailCount = -k;
+
+    if(snailCount === 0) snail = this.head;
+
+    while(hare.next) {
+      snailCount++;
+      if(snailCount === 0) {
+        snail = this.head;
+      } else if(snailCount > 0) {
+        snail = snail.next;
+      }
+      hare = hare.next;
+    }
+    return snail && snail.value;
+  }
 }
 
 const node1 = new Node('Hi');
@@ -67,3 +89,5 @@ const list1 = new LinkedList(node1);
 console.log(list1.append('Bye Bye'));
 
 list1.includes('Hi');
+
+module.exports = LinkedList;
