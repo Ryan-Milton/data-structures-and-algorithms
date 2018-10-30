@@ -4,7 +4,8 @@
   "description": "",
   "main": "stacks-and-queues.js",
   "scripts": {
-    "test": "jest --verbose --coverage"
+    "test": "jest --verbose --coverage",
+    "watch": "jest --verbose --coverage --watchAll"
   },
   "author": "Ryan Milton",
   "license": "MIT",
