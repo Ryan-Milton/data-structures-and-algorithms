@@ -46,7 +46,7 @@ class BinarySearchTree{
       } else {
         current = current.right;
       }
-      if(current === null) {
+      if(!current) {
         return null;
       }
     }

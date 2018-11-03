@@ -2,13 +2,13 @@
 
 class BinaryTree {
   constructor(root=null) {
-    this.root = root
+    this.root = root;
   }
   
   preOrder(node = this.root){
     let preOrderArray = [];
     logPreOrder(node);
-    console.log(preOrderArray)
+    console.log(preOrderArray);
 
     function logPreOrder(node) {
       if(!node) return;
