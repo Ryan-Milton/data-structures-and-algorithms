@@ -1,3 +1,4 @@
+/* eslint-disable no-inner-declarations */
 'use strict';
 
 const Node = require('./Node.js');
@@ -9,38 +10,48 @@ class BinarySearchTree{
   
   add(data) {
     const node = this.root;
-    if(node === null) {
+    if(!node) {
       this.root = new Node(data);
-      console.log(this.root);
       return;
     } else {
       function searchTree(node) {
         if(data < node.value) {
-          if(node.left === null) {
-            node.left = new Node(data)
-            console.log(node.left);
+          if(!node.left) {
+            node.left = new Node(data);
             return;
-          } else if(node.left !== null) {
+          } else if(node.left) {
             return searchTree(node.left);
-          } else if(data > node.data) {
-            if(node.right === null) {
-              node.right = new Node(data)
-              console.log(node.right);
-              return;
-            } else if(node.right !== null) {
-              return searchTree(node.right);
-            }
-          } else {
-            return null;
           }
+        } else if(data > node.value) {
+          if(!node.right) {
+            node.right = new Node(data);
+            return;
+          } else if(node.right) {
+            return searchTree(node.right);
+          }
+        } else {
+          return null;
         }
-        searchTree(node);
       }
+      return searchTree(node);
     }
   }
   
-  search(value) {
-    let searchValue = value.toLowerCase();
+  
+  search(data) {
+    let current = this.root;
+    while(current.value !== data) {
+      if(data < current.value) {
+        current = current.left;
+      } else {
+        current = current.right;
+      }
+      if(current === null) {
+        return null;
+      }
+    }
+    console.log(current);
+    return current;
   }
   
 }
