@@ -13,4 +13,4 @@ Time = O(n)
 Space = O(h)
 
 ## Solution
-<img src="/assets/fizz-buzz-tree.jpg">
+<img src="assets/fizz-buzz-tree.jpg">
