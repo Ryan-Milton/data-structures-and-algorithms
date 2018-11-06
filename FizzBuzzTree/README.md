@@ -14,3 +14,5 @@ Space = O(h)
 
 ## Solution
 <img src="assets/fizz-buzz-tree.jpg">
+Proof that code works (with minor tweak)
+<img src="assets/fizz-buzz-tree-tests.png">
