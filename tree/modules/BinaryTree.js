@@ -50,6 +50,16 @@ class BinaryTree {
     return postOrderArray;
   }
 
+  findMax() {
+    let values = this.preOrder();
+    let max = values[0];
+    for(let i = 0; i<values.length; i++) {
+      if(values[i] > max) max = values[i];
+    }
+    console.log(max);
+    return max;
+  }
+
 }
 
 module.exports = BinaryTree;

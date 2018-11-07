@@ -34,21 +34,26 @@ describe('Binary Tree Testing', () => {
       expect(btree.preOrder()).toBeDefined();
     });
   });
-  describe('Getting the In Order of the Tree', () => {
+  xdescribe('Getting the In Order of the Tree', () => {
     it('should return the tree in order', () => {
       expect(btree.inOrder()).toBeDefined();
     });
   });
-  describe('Getting the Post Order of the Tree', () => {
+  xdescribe('Getting the Post Order of the Tree', () => {
     it('should return a post order of the tree', () => {
       expect(btree.postOrder()).toBeDefined();
+    });
+  });
+  describe('Getting the Max Value of the Tree', () => {
+    it('should return the max value of the input tree', () => {
+      expect(btree.findMax()).toBe('Oranges');
     });
   });
 });
 
 // ------------ Binary Search Tree ---------------
 
-describe('Binary Search Tree Testing', () => {
+xdescribe('Binary Search Tree Testing', () => {
   let bstree = new BinarySearchTree();
   describe('Adding onto the Binary Search Tree', () => {
     bstree.add(10);
