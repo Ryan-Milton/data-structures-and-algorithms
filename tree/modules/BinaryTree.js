@@ -51,10 +51,10 @@ class BinaryTree {
   }
 
   findMax() {
-    let inputTree = this.preOrder();
-    let max = inputTree[0];
-    for(let i = 0; i<inputTree.length; i++) {
-      if(inputTree[i] > max) max = inputTree[i];
+    let values = this.preOrder();
+    let max = values[0];
+    for(let i = 0; i<values.length; i++) {
+      if(values[i] > max) max = values[i];
     }
     console.log(max);
     return max;
