@@ -2,7 +2,7 @@
 
 const util = require("util");
 
-class HashMap {
+class HashTable {
   constructor(size) {
     this.size = size;
     this.map = new Array(size);
