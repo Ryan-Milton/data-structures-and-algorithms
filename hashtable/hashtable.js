@@ -63,4 +63,23 @@ class HashTable {
     }
   }
 
+  serialize() {
+    return ('Here is the entirety of the HashMap', JSON.stringify(this.map));
+  }
+
+  deserialize() {
+    let parsedArray = JSON.parse(this.serialize());
+    // console.log('Inside the deserialize method',parsedArray);
+    let deserializedMap = new HashMap(parsedArray.length);
+    console.log('Deserialized Map',deserializedMap);
+    // let parsedArrayItems = [];
+    parsedArray.forEach(item => {
+      if(item !== null) {
+        // parsedArrayItems.push(item);
+        console.log(item);
+        // deserializedMap.add(item);
+      };
+    });
+  }
+  
 }
