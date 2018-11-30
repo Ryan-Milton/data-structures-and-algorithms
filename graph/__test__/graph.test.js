@@ -22,14 +22,18 @@ describe('Testing Vertex', () => {
 });
 
 describe('Testing Graph', () => {
-  it('creates a Graph', () => {
+  it('Graph._adjacencyList is an instance of Map', () => {
     const graph = new Graph();
-    expect(graph._adjacencyList).toEqual(new Map());
+    // expect(graph._adjacencyList).toEqual(new Map());
+    expect(graph._adjacencyList).toBeInstanceOf(Map);
+
   });
 
-  it('creates a Graph', () => {
+  it('Graph is an instance of Graph', () => {
     const graph = new Graph();
-    expect(graph).toEqual(new Graph());
+    // expect(graph).toEqual(new Graph());
+    expect(graph).toBeInstanceOf(Graph);
+
   });
 });
 
@@ -59,3 +63,23 @@ describe('Testing Edge', () => {
   });
 });
 
+describe('Testing the Neighbors', () => {
+  it('Length of Neighbors is 3', () => {
+    const graph = new Graph();
+    const ten = new Vertex(10);
+    const one = new Vertex(1);
+    const five = new Vertex(5);
+    const seven = new Vertex(7);
+
+    graph.addVertex(ten);
+    graph.addVertex(one);
+    graph.addVertex(five);
+    graph.addVertex(seven);
+
+    graph.addDirectedEdge(ten, one);
+    graph.addDirectedEdge(ten, five);
+    graph.addDirectedEdge(ten, seven);
+
+    expect(graph.getNeighbors(ten).length).toBe(3);
+  });
+})
