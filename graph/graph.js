@@ -33,12 +33,22 @@ class Graph {
     adjancencies.push(new Edge(endVertex, weight));
   }
 
+  getNodes() {
+    const all = this._adjacencyList;
+    console.log(all);
+    return all;
+  }
+
   getNeighbors(vertex) {
     if(!this._adjacencyList.has(vertex)) {
       throw new Error('__ERROR__ Invalid Nodes');
     }
 
     return [...this._adjacencyList.get(vertex)];
+  }
+
+  size() {
+    return this._adjacencyList.size;
   }
   
   bfs(startNode) {
@@ -51,7 +61,6 @@ class Graph {
 
 module.exports = {
   Vertex,
-  Edge,
   Graph
 };
 
