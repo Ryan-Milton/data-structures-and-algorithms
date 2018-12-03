@@ -136,3 +136,25 @@ describe('Testing Size', () => {
     expect(graph.size()).toBe(4);
   });
 });
+
+describe('Testing BFS', () => {
+  it('should output all nodes in a breadth-first order', () => {
+    const graph = new Graph();
+
+    const ten = new Vertex(10);
+    const one = new Vertex(1);
+    const five = new Vertex(5);
+    const seven = new Vertex(7);
+
+    graph.addVertex(ten);
+    graph.addVertex(one);
+    graph.addVertex(five);
+    graph.addVertex(seven);
+
+    graph.addDirectedEdge(ten, one);
+    graph.addDirectedEdge(ten, five);
+    graph.addDirectedEdge(ten, seven);
+
+    expect(graph.bfs(ten)).toBeInstanceOf(Set);
+  });
+});
