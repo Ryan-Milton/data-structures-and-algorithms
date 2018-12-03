@@ -21,3 +21,7 @@ Creating the Graph data structure
 * Fork repo
 * npm i
 * npm test
+
+## Solution
+  * BFS 
+    * <img src="assets/bfs.jpg" />
