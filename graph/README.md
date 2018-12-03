@@ -14,6 +14,8 @@ Creating the Graph data structure
   * Include the weight from the given node.
 * Size()
   * returns the total number of nodes in the graph
+* BFS()
+  * returns the Set object which are all the Nodes that are the 'neighbors' of the startNode
 
 ## Structure and Testing
 * Fork repo
